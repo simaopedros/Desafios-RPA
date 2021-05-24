@@ -52,25 +52,27 @@ namespace Desafios_RPA
         {
             if (index <= clientes.Length - 1)
             {
-                clientes[index].nome = txtNome.Text;
-                clientes[index].logradouro = txtLogradouro.Text;
-                clientes[index].cidade = txtCidade.Text;
-                clientes[index].estado = cbbEstado.Text;
-                clientes[index].empresa = txtEmpresa.Text;
-                clientes[index].cargo = txtCargo.Text;
-
-                int.TryParse(txtIdade.Text, out convertIdade);
-                clientes[index].idade = convertIdade;
-
-                clientes[index].mae = cbbSexo.Text;
-                clientes[index].mae = txtMae.Text;
-                clientes[index].pae = txtPai.Text;
-
-                Double.TryParse(txtSalario.Text, out convertSalario);
-                clientes[index].salario = convertSalario;
+                
 
                 if (convertIdade >= 18 && convertSalario > 1048.00)
                 {
+                    clientes[index].nome = txtNome.Text;
+                    clientes[index].logradouro = txtLogradouro.Text;
+                    clientes[index].cidade = txtCidade.Text;
+                    clientes[index].estado = cbbEstado.Text;
+                    clientes[index].empresa = txtEmpresa.Text;
+                    clientes[index].cargo = txtCargo.Text;
+
+                    int.TryParse(txtIdade.Text, out convertIdade);
+                    clientes[index].idade = convertIdade;
+
+                    clientes[index].mae = cbbSexo.Text;
+                    clientes[index].mae = txtMae.Text;
+                    clientes[index].pae = txtPai.Text;
+
+                    Double.TryParse(txtSalario.Text, out convertSalario);
+                    clientes[index].salario = convertSalario;
+
                     lblSucesso.Content = "Cadastrado com Sucesso";
                 }
                 else

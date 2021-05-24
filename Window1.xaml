@@ -12,7 +12,7 @@
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,21,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="215" Grid.ColumnSpan="2"/>
-        <Button Content="Receber" HorizontalAlignment="Left" Margin="55,17,0,0" VerticalAlignment="Top" Width="87" Grid.Column="1" Click="Button_Click"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="10,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnReceberPlanilha" Content="Receber" HorizontalAlignment="Left" Margin="55,17,0,0" VerticalAlignment="Top" Width="87" Grid.Column="1" Click="Button_Click"/>
     </Grid>
 </Window>

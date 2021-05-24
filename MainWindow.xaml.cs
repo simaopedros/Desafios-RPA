@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -27,6 +28,17 @@ namespace Desafios_RPA
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string remoteUri = "https://mestrerpa.com.br/wp-content/uploads/2021/05/";
+            string fileName = "Invoice-Data-Currencies.xlsx", myStringWebResource = null;
+
+            // Create a new WebClient instance.
+            using (WebClient myWebClient = new WebClient())
+            {
+                myStringWebResource = remoteUri + fileName;
+                // Download the Web resource and save it into the current filesystem folder.
+                myWebClient.DownloadFile(myStringWebResource, fileName);
+            }
+
             this.Hide();
             var windowsMail = new Window1();
             windowsMail.Show();
