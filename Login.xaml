@@ -7,9 +7,10 @@
         mc:Ignorable="d"
         Title="Login" Height="250" Width="300">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="20,20,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="245"/>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="20,80,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="245"/>
+        <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="40" Margin="20,40,0,0" TextWrapping="Wrap" Text="Usuario" VerticalAlignment="Top" Width="245"/>
+        <TextBox x:Name="txtSenha" HorizontalAlignment="Left" Height="40" Margin="20,95,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top" Width="245"/>
         <Button Content="Logar" HorizontalAlignment="Left" Margin="190,145,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Label Content="Digite a senha recebida em Seu email" HorizontalAlignment="Center" Margin="54,10,52,0" VerticalAlignment="Top" Width="186" FontWeight="Bold" FontSize="10"/>
 
     </Grid>
 </Window>

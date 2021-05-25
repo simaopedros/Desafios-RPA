@@ -20,15 +20,20 @@ namespace Desafios_RPA
     /// </summary>
     public partial class Window1 : Window
     {
+        private Usersenha Users = new Usersenha();
         public Window1()
         {
             InitializeComponent();
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string email = txtEmail.Text;
-            MessageBoxResult result = MessageBox.Show(email);
+            string MachineName1 = Environment.MachineName;
+            Users.usuario = MachineName1;
+            Random randNum = new Random();
+            Users.senha = randNum.Next().ToString();
             this.Hide();
             SmtpClient smtp = new SmtpClient();
             MailMessage mail = new MailMessage();
@@ -42,17 +47,17 @@ namespace Desafios_RPA
             smtp.EnableSsl = true;
             smtp.UseDefaultCredentials = false;
 
-            smtp.Credentials = new System.Net.NetworkCredential();
+            smtp.Credentials = new System.Net.NetworkCredential("", "");
 
             mail.From = new MailAddress("simaopedros@live.com");
             mail.To.Add(new MailAddress(email));
             mail.Subject = "Desafio RPA - Planilha de Dados";
-            mail.Body = "Usuario: DesafioRPA, Senha: 123456";
+            mail.Body = "Usuario: " + Users.usuario  + ", Senha: "+ Users.senha +"";
 
             smtp.Send(mail);
 
 
-            var LoginPage = new Login();
+            var LoginPage = new Login(Users.usuario, Users.senha);
             LoginPage.Show();
 
         }

@@ -31,11 +31,42 @@
         <TextBox x:Name="txtMae" HorizontalAlignment="Left" Height="23" Margin="75,219,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="290" Grid.ColumnSpan="2"/>
         <TextBox x:Name="txtPai" HorizontalAlignment="Left" Height="23" Margin="75,249,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="290" Grid.ColumnSpan="2"/>
         <TextBox x:Name="txtSalario" HorizontalAlignment="Left" Height="23" Margin="75,277,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="290" Grid.ColumnSpan="2"/>
-        <ComboBox x:Name="cbbEstado" HorizontalAlignment="Left" Margin="30,103,0,0" VerticalAlignment="Top" Width="95" Grid.Column="1"/>
-        <ComboBox x:Name="cbbSexo" HorizontalAlignment="Left" Margin="30,190,0,0" VerticalAlignment="Top" Width="95" Grid.Column="1"/>
+        <ComboBox x:Name="cbbEstado" HorizontalAlignment="Left" Margin="30,103,0,0" VerticalAlignment="Top" Width="95" Grid.Column="1">
+            <ComboBoxItem>Acre</ComboBoxItem>
+            <ComboBoxItem>Alagoas</ComboBoxItem>
+            <ComboBoxItem>Amapá</ComboBoxItem>
+            <ComboBoxItem>Amazonas</ComboBoxItem>
+            <ComboBoxItem>Bahia</ComboBoxItem>
+            <ComboBoxItem>Ceará</ComboBoxItem>
+            <ComboBoxItem>Espírito Santo</ComboBoxItem>
+            <ComboBoxItem>Goiás</ComboBoxItem>
+            <ComboBoxItem>Maranhão</ComboBoxItem>
+            <ComboBoxItem>Mato Grosso</ComboBoxItem>
+            <ComboBoxItem>Mato Grosso do Sul</ComboBoxItem>
+            <ComboBoxItem>Minas Gerais</ComboBoxItem>
+            <ComboBoxItem>Pará</ComboBoxItem>
+            <ComboBoxItem>Paraíba</ComboBoxItem>
+            <ComboBoxItem>Paraná</ComboBoxItem>
+            <ComboBoxItem>Pernambuco</ComboBoxItem>
+            <ComboBoxItem>Piauí</ComboBoxItem>
+            <ComboBoxItem>Rio de Janeiro</ComboBoxItem>
+            <ComboBoxItem>Rio Grande do Norte</ComboBoxItem>
+            <ComboBoxItem>Rio Grande do Sul</ComboBoxItem>
+            <ComboBoxItem>Rondônia</ComboBoxItem>
+            <ComboBoxItem>Roraima</ComboBoxItem>
+            <ComboBoxItem>São Paulo</ComboBoxItem>
+            <ComboBoxItem>Sergipe</ComboBoxItem>
+            <ComboBoxItem>Tocantins</ComboBoxItem>
+            <ComboBoxItem>Distrito Federal</ComboBoxItem>
+
+        </ComboBox>
+        <ComboBox x:Name="cbbSexo" HorizontalAlignment="Left" Margin="30,190,0,0" VerticalAlignment="Top" Width="95" Grid.Column="1">
+            <ComboBoxItem>M</ComboBoxItem>
+            <ComboBoxItem>F</ComboBoxItem>
+        </ComboBox>
         <Label Content="Cadastro de Clientes" HorizontalAlignment="Left" Margin="11,10,0,0" VerticalAlignment="Top" Width="354" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnGravar" Content="Gravar" HorizontalAlignment="Left" Margin="50,323,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="btnGravar_Click"/>
-        <Button x:Name="btnFinalizar" Content="Finalizar" HorizontalAlignment="Left" Margin="11,323,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnGravar" Content="Gravar" HorizontalAlignment="Left" Margin="30,323,0,0" VerticalAlignment="Top" Width="100" Grid.Column="1" Click="btnGravar_Click"/>
+        <Button x:Name="btnFinalizar" Content="Finalizar" HorizontalAlignment="Left" Margin="11,323,0,0" VerticalAlignment="Top" Width="100" Click="btnFinalizar_Click"/>
         <Label x:Name="lblSucesso" Content="" HorizontalAlignment="Left" Margin="13,299,0,0" VerticalAlignment="Top" Width="352" Grid.ColumnSpan="2"/>
 
     </Grid>
